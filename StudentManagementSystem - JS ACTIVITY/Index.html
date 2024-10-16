@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        
+        <div class="button-group">
+            <button onclick="addStudents()">Add Students</button>
+            <button onclick="viewStudents()">View Students</button>
+            <button onclick="sortStudents()">Sort Students</button>
+            <button onclick="initDeleteStudent()">Delete Student</button>
+        </div>
+        <div id="deleteSection" class="delete-section" style="display: none;">
+            <label for="deleteStudentName">Type student name to delete:</label>
+            <input type="text" id="deleteStudentName" onkeyup="filterStudents()" placeholder="Start typing name...">
+            <ul id="studentSuggestions"></ul> <!-- Suggestions will appear here -->
+        </div>
+        <!--<div id="studentList" class="student-list"></div>-->
+        <table id="studentTable" class="student-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+                <!-- Student data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
